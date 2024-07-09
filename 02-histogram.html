@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histogram</title>
+</head>
+<body>
+    <script>
+
+        function histogram(string) {
+            let histogram = [];
+
+            Array.from(string).forEach((char) => histogram[char] = (histogram[char]>0?histogram[char]:0) + 1);
+
+            return histogram;
+        }
+
+        console.log(histogram("tooooooo"));
+        console.log(histogram("Tuuuuut"));
+        console.log(histogram("day"));
+
+    </script>
+</body>
+</html>

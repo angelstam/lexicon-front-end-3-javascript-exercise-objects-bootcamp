@@ -1,0 +1,17 @@
+const tlds = {
+        FR: "fr",
+        CH: "ch",
+        DE: "de",
+        NO: "no",
+        US: "us",
+        FI: "fi",
+        GB: "uk",
+        NL: "nl",
+        NZ: "nz",
+        AU: "au",
+        ES: "ee",
+        IE: "ie",
+        DK: "dk",
+        BR: "br",
+        CA: "ca",
+    };

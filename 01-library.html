@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+    <script>
+
+        let books = [
+                {
+                    title: "The Guide",
+                    author: "Jack the Ripper",
+                    numPages: 666,
+                },
+                {
+                    title: "Friday",
+                    author: "The Elm street gang",
+                    numPages: 123,
+                },
+                {
+                    title: "How to fake some WMDs",
+                    author: "Dick Cheney",
+                    numPages: 999,
+                },
+            ];
+
+        function findBooks(title) {
+            return books.filter((book) => book.title.includes(title));
+        }
+
+        console.log(findBooks("to"));
+        console.log(findBooks("Guide"));
+        console.log(findBooks("day"));
+
+    </script>
+</body>
+</html>

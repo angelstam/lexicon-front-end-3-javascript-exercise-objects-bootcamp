@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Register</title>
+</head>
+<body>
+    <script src="users.js"></script>
+    <script src="tlds.js"></script>
+    <script>
+
+        function filterByCountry(users, cc) {
+            return users.filter((user) => user.nat === cc);
+        }
+
+        console.log("filterByCountry", filterByCountry(users, "US"));
+
+        function listEmails(users) {
+            return users.map((user) => user.email);
+        }
+
+        console.log("listEmails", listEmails(filterByCountry(users, "US")));
+
+        function reformatEmails(users, tlds) {
+            return users.map((user) => user.email.replace(/([a-z]+)\.([a-z]+)@example\.com/i, "$2.$1@evilcorp.") + tlds[user.nat]);
+        }
+
+        console.log("reformatEmails", reformatEmails(filterByCountry(users, "US"), tlds));
+
+    </script>
+</body>
+</html>
